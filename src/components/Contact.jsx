@@ -1,14 +1,7 @@
 import React from 'react';
 import { portfolioData } from '../data/portfolioData';
 
-export default function Contact({ showToast }) {
-  const copyToClipboard = (text, label) => {
-    navigator.clipboard.writeText(text);
-    if (showToast) {
-      showToast(`${label} copied!`);
-    }
-  };
-
+export default function Contact() {
   return (
     <section id="contact">
       <p className="section__text__p1">Get in Touch</p>
@@ -28,13 +21,6 @@ export default function Contact({ showToast }) {
               {portfolioData.email}
             </a>
           </p>
-          <button 
-            className="copy-btn" 
-            onClick={() => copyToClipboard(portfolioData.email, 'Email')}
-            title="Copy Email"
-          >
-            📋
-          </button>
         </div>
 
         {/* LinkedIn */}
