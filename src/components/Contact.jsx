@@ -18,7 +18,7 @@ export default function Contact() {
           />
           <p>
             <a href={`mailto:${portfolioData.email}`}>
-              {portfolioData.email}
+              Mail
             </a>
           </p>
         </div>
