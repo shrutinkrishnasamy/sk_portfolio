@@ -59,7 +59,7 @@ a,
 /* --------------------------------------------------------------------------
    DESKTOP & HAMBURGER NAVIGATION
    -------------------------------------------------------------------------- */
-nav {
+#desktop-nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -1061,25 +1061,65 @@ article p {
    FOOTER SECTION
    -------------------------------------------------------------------------- */
 footer {
-  padding: 3rem 1rem;
+  padding: 3rem 1rem 2.5rem;
   text-align: center;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
+  background-color: #ffffff;
+  position: relative;
+  z-index: 1;
+}
+
+footer nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto !important;
+  min-height: auto;
+  position: static !important;
+  background: transparent !important;
+  backdrop-filter: none !important;
+  border: none !important;
+  margin-bottom: 1.5rem;
+  padding: 0;
 }
 
 footer .nav-links-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 2rem;
+  width: 100%;
 }
 
 footer .nav-links {
-  gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer .nav-links a {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--color-black);
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+}
+
+footer .nav-links a:hover {
+  color: var(--color-gray);
+  text-decoration: underline;
+  text-underline-offset: 0.4rem;
 }
 
 footer p {
   text-align: center;
   font-size: 0.9rem;
   color: var(--color-gray);
+  margin-top: 0.4rem;
+  line-height: 1.5;
 }
 
 /* --------------------------------------------------------------------------
@@ -1400,11 +1440,20 @@ footer p {
     max-width: none;
   }
   footer {
-    padding-bottom: 3rem;
+    padding: 2.5rem 1rem 2rem;
+  }
+  footer nav {
+    height: auto !important;
+    margin-bottom: 1.25rem;
   }
   footer .nav-links {
-    flex-direction: column;
-    gap: 0.75rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.25rem;
+    justify-content: center;
+  }
+  footer .nav-links a {
+    font-size: 0.95rem;
   }
 }
 
